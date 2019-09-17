@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>時間割アプリ</title>
+  </head>
+  <body>
+    <h1>時間割</h1>
+    <a href='/'>１週間</a>
+    <a href='/monday'>月曜日</a>
+    <div>
+      <table border="1" cellpadding="5" cellspacing="0">
+          <thead>
+            <tr>
+              <th></th>
+              <td>１限目</td>
+              <td>２限目</td>
+              <td>３限目</td>
+              <td>４限目</td>
+              <td>５限目</td>
+              <td>６限目</td>
+            </tr>
+          </thead>
+          <tbody>
+            <% @datas.each do |key, value| %>
+              <tr>
+                <th><%= key %></th>
+                <% value.each do |v| %>
+                  <td><%= v %></td>
+                <% end %>
+              </tr>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>  
+    </div>
+  </body>
+</html>
